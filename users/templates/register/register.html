@@ -1,0 +1,35 @@
+{% extends 'Feed/base.html' %}
+{% load tailwind_filters %}
+{% block content %}
+    <div class="bg-red-500 w-auto h-auto flex items-center pt-36">
+
+    <form method="POST">
+    {% csrf_token %}
+
+    <fieldset class="">
+
+    <legend class="">Join Today</legend>
+    <!--UserForm Creation accessed here-->
+    {{ form|crispy }}
+
+    </fieldset>
+
+    <div class="">
+    <!--Submit button-->
+    <button class="btn btn-outline info" type="submit">
+    Sign up
+    </button>
+
+    </div>
+    </form>
+    <div class="border-top pt-3">
+
+    <small class="text-muted">
+    Already have an account?
+    <small>
+    <a class="ml-2" href="{% url 'login' %}">Log In</a>
+
+    </div>
+    
+    </div>
+{% endblock content %}
