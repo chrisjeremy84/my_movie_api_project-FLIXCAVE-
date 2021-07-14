@@ -19,9 +19,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-  #  path('login/', authviews.authviews.LoginView.as_view(template_name="/login&logout/login.html")),
-   #path('logout/', authviews.authviews.LogoutView.as_view(template_name="/login&logout/logout.html")),
-    #path('Feed/', include('Feed.urls')),
+    path('login/', authviews.LoginView.as_view(template_name="login&logout/login.html")),
+    path('logout/', authviews.LogoutView.as_view(template_name="login&logout/logout.html")),
+    path('Feed/', include('Feed.urls')),
     path('search/', include('users.urls')),
     path('', include('users.urls'))
 ]

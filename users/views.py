@@ -13,16 +13,18 @@ def logout(request):
     return render( request, 'login&logout/logout.html')
 
 def register(request):
-     if request.method == "POST":
-        form = UserRegisterForm(request.POST)
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            messages.success(request, f'{username}, Welcome to the Cave :)')
-            return redirect('user-search')
-        else:
-            form = UserRegisterForm()
-        return render(request, 'register/register.html',{'form':form})
+     if request.method != "POST":
+         form = UserRegisterForm()
+         return render(request, 'register/register.html',{'form':form})
+     else:
+         form = UserRegisterForm(request.POST)
+         if form.is_valid():
+             form.save()
+             username = form.cleaned_data.get('username')
+             messages.success(request, f'Account created, Welcome to the cave {username}')
+             return redirect('users-search')
+      
+
     
 
 def help(request):
