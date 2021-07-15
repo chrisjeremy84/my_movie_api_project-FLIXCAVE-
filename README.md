@@ -4,7 +4,7 @@
 * [Introduction](#Introduction)
 * [Objective](Objective)
 * [Technologies](#technologies)
-* [Additonal Info](Additional Info)
+* [Additonal_Info](Additional_Info)
 * [Setup](#setup)
 
 ## Introduction
