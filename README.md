@@ -2,9 +2,9 @@
 
 ## Table of contents
 * [Introduction](#Introduction)
-* [Objective][Objective]
+* [Objective](Objective)
 * [Technologies](#technologies)
-* [Additonal Info][Additional Info]
+* [Additonal Info](Additional Info)
 * [Setup](#setup)
 
 ## Introduction
