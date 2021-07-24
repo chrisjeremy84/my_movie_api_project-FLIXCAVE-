@@ -1,5 +1,7 @@
 # my_movie_api_project-FLIXCAVE-
 
+<img src="https://user-images.githubusercontent.com/53315778/126880784-eb041e0b-1570-4374-bfcb-bca3f4d21ba3.png" height=360 width=480/>
+
 ## Table of contents
 * [Introduction](#Introduction)
 * [Objective](Objective)
