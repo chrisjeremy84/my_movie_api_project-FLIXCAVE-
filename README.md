@@ -24,6 +24,7 @@ Project is created with:
 * Python version: 3.8.5
 * Django version: 3.1.4
 * Tailwind version: 2.0
+* Pytorch version: 1.8.0
 
 ## Additional Info
 Included in this project is tailwind css, which must be installed through a specific path. Here is a method I use for installing tailwindcss in my django projects, the url is below;
