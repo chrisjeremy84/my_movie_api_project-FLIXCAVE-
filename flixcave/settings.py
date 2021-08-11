@@ -126,3 +126,6 @@ STATIC_URL = '/static/'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
 
 CRISPY_TEMPLATE_PACK = "tailwind"
+
+LOGIN_REDIRECT_URL='users-search'
+LOGIN_URL = 'login'
