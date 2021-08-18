@@ -1,21 +1,26 @@
 {% extends 'Feed/base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
- <div class="content-section">
-  <div class="media">
-    <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
-    <div class="media-body">
-      <h2 class="account-heading">{{user.username}}</h2>
+
+
+ <div class="flex flex-col p-12 md:pl-52 md:pr-52">
+  <div class="space-y-6">
+    <img class=" block mx-auto h-60 rounded-full sm:mx-0 sm:flex-shrink-0" src="{{ user.profile.image.url }}">
+    <div class="text-gray-300 font-semibold">
+      <h2 class="account-heading">@{{user.username}}</h2>
       <p class="text-secondary">{{user.email}}</p>
     </div>
   </div>
+
+
+
   <!-- FORM HERE -->
   <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
 
-            <fieldset class="form-group">
+            <fieldset class="pt-9">
 
-            <legend class="border-bottom mb-4">Profile info</legend>
+            <legend class="text-3xl text-white font-bold underline">Profile info</legend>
             <!--UserForm Creation accessed here-->
             {{ u_form|crispy }}
             {{ p_form|crispy }}
@@ -23,7 +28,7 @@
 
             <div class="form-group">
             <!--Submit button-->
-            <button class="btn btn-outline info" type="submit">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">
             Update
             </button>
 
